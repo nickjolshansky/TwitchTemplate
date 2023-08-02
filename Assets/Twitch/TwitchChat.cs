@@ -53,6 +53,16 @@ public class TwitchChat : MonoBehaviour
 
                 OnChatMessage?.Invoke(user, msg);
             }
+
+            if (message.Contains("USERNOTICE")) //subscription event
+            {
+                if (message.Contains("msg-id=resub") || message.Contains("msg-id=sub")) //only handles subscriptions and resubs
+                {
+                    int splitPoint = message.IndexOf("!");
+                    string user = message.Substring(1, splitPoint - 1);
+                    print(user + " has subscribed!");
+                }
+            }
         }
     }
 
@@ -65,6 +75,8 @@ public class TwitchChat : MonoBehaviour
         writer.WriteLine("PASS " + oAuth);
         writer.WriteLine("NICK " + channelName.ToLower());
         writer.WriteLine("JOIN #" + channelName);
+        writer.WriteLine("CAP REQ :twitch.tv/membership");
+        writer.WriteLine("CAP REQ :twitch.tv/commands");
         writer.Flush();
     }
 

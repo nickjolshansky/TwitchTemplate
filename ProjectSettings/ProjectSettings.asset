@@ -772,8 +772,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Twitch Template
-  metroPackageVersion: 
+  metroPackageName: TwitchTemplate
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -781,7 +781,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Twitch Template
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Twitch Template
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
